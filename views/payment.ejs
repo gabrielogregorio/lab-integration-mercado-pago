@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprar Produto</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <nav>
+    <a href="/">Produto</a>
+    <a href="/payments" class="active">Pagamentos</a>
+  </nav>
+  
+  <div class="contaner">
+    <div class="item-vertical">
+      <% payments.forEach(payment => {%>
+        <div class="item-produto">
+          <img src="/images/produto1.png" alt="produto comprado">
+          <p class="name"><%=payment.name%></p>
+          <p class="price">R$ <%=payment.price%></p>
+          <% if (payment.status == 'Pago') { %>
+            <p class="status green"><%=payment.status%></p>              
+          <% } else { %>
+            <p class="status blue"><%=payment.status%></p>              
+          <% } %>
+          
+        </div>  
+      <%})%>
+    </div>  
+  </div>
+
+</body>
+</html>

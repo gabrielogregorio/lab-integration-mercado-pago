@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #dfdfdf;
+  font-size: 16px;
+  color: #333;
+}
+
+nav {
+  background-color: rgb(60, 143, 211);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0 10px;
+}
+nav a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+}
+
+nav a.active::after {
+  background-color: white;
+}
+
+.contaner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+}
+
+.item {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  padding: 20px;
+}
+
+.item .imagem {
+  order: 1;
+}
+
+.item .imagem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.item .imagem img:hover {
+  border-radius: 20px;
+  transition: 2s;
+  cursor: pointer;
+}
+
+.item .detalhes {
+  padding: 0 10px;
+  order: 2;
+}
+
+.descricao p {
+  background-color: orange;
+  color: white;
+  padding: 10px;
+}
+
+.descricao h3 {
+  font-size: 40px;
+  padding: 5px 0;
+}
+
+.descricao h4 {
+  font-size: 18px;
+  color: rgba(0, 182, 9, 0.65);
+  padding: 5px 0;
+}
+
+
+.descricao h4 span {
+  /* Isso é muito errado hahahah */
+  color: rgba(0, 182, 9, 0.6);
+}
+
+.chegada p {
+  color: blueviolet;
+  padding: 5px 0;
+}
+
+.quantidade p {
+  padding: 2px 0;
+}
+
+.quantidade p span {
+  color: #aaa;
+}
+
+.comprar a {
+  background-color: rgb(60, 143, 211);
+  color: white;
+  display: block;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.comprar a:hover {
+  transition: 2s;
+  background-color: rgb(82, 173, 247);
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    flex-direction: column;
+  }  
+}
+
+
+/* Pagamento */
+.item-vertical{
+  max-width: 1000px;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+}
+
+.item-produto {
+  width: 100%;
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
+}
+
+.item-produto img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.item-produto > .name {
+  width: 100%;
+  padding: 0 5px;
+}
+.item-produto > .price {
+  width: 20%;
+  text-align: left;
+}
+
+.item-produto > .status {
+  width: 20%;
+  text-align: right;
+}
+
+.item-produto .green {
+  color: rgb(0, 160, 0);
+}
+
+.item-produto  .blue {
+  color: rgb(0, 110, 255);
+}
